@@ -1,212 +1,210 @@
 'use client'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 
 export default function ProblemSection() {
-  const [activeBlockade, setActiveBlockade] = useState(0)
-  const [animatedCards, setAnimatedCards] = useState([])
+  const [visibleProblems, setVisibleProblems] = useState([])
+  const sectionRef = useRef(null)
 
-  const blockades = [
+  const problems = [
     {
-      title: "The Foundation Problem",
-      icon: "🧭",
-      description: "Missing clarity, structure, or expertise to develop an authentic, strategic brand identity.",
-      details: [
-        "Vague positioning & lack of differentiation",
-        "Understanding deficits about strategic branding", 
-        "Resource constraints (time, budget, expertise)",
-        "Psychological barriers & perfectionism",
-        "Personal/business identity integration challenges"
-      ],
-      impact: "Result: Generic positioning, interchangeability, commodity pricing",
-      color: "red"
+      title: "The Generic Trap",
+      description: "67% of creators say they sound like everyone else",
+      visual: "👥",
+      details: "Without a clear brand kernel, you blend into the noise. Your content feels interchangeable, your pricing power suffers, and ideal clients can't find you.",
+      stat: "67%",
+      statLabel: "sound generic"
     },
     {
-      title: "The Activation Problem", 
-      icon: "⚡",
-      description: "Massive difficulty translating defined brand identity into consistent daily execution.",
-      details: [
-        "Operationalization gap from strategy to action",
-        "Consistency challenges across touchpoints",
-        "Complex AI prompting & content creation barriers", 
-        "Time pressure & resource limitations",
-        "Lack of systematic activation frameworks"
-      ],
-      impact: "Result: Strategy remains ineffective, AI leads to homogenization",
-      color: "orange"
-    }
-  ]
-
-  const scenarios = [
-    {
-      persona: "Sarah, UX Designer",
-      problem: "\"I know I need to stand out, but everything I create feels generic. I spend hours trying to craft the perfect LinkedIn post, but it still sounds like everyone else.\"",
-      blockade: "both",
-      icon: "👩‍💻"
+      title: "The Strategy-Execution Gap", 
+      description: "You know you need a brand strategy. You don't know how to live it daily.",
+      visual: "🌉",
+      details: "Even when you have clarity on paper, translating strategy into consistent daily actions feels impossible. The gap between knowing and doing kills momentum.",
+      stat: "43%",
+      statLabel: "struggle with execution"
     },
     {
-      persona: "Marcus, Consultant", 
-      problem: "\"I have 10 years of experience, but I can't articulate what makes me different. My proposals get lost in a sea of similar offers.\"",
-      blockade: "foundation",
-      icon: "👨‍💼"
-    },
-    {
-      persona: "Lisa, Content Creator",
-      problem: "\"I know my values and mission, but turning that into daily content is exhausting. ChatGPT makes me sound like everyone else.\"", 
-      blockade: "activation",
-      icon: "🎨"
+      title: "The AI Paradox",
+      description: "More AI tools. More generic content. Less authentic voice.",
+      visual: "🔄",
+      details: "AI amplifies what you put in. Without an authentic kernel as your filter, AI-generated content sounds like everyone else using the same prompts.",
+      stat: "78%",
+      statLabel: "use identical AI patterns"
     }
   ]
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setActiveBlockade((prev) => (prev + 1) % blockades.length)
-    }, 5000)
-    return () => clearInterval(interval)
-  }, [])
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          problems.forEach((_, index) => {
+            setTimeout(() => {
+              setVisibleProblems(prev => [...prev, index])
+            }, index * 300)
+          })
+        }
+      },
+      { threshold: 0.2 }
+    )
 
-  useEffect(() => {
-    blockades.forEach((_, index) => {
-      setTimeout(() => {
-        setAnimatedCards(prev => [...prev, index])
-      }, index * 300)
-    })
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current)
+    }
+
+    return () => observer.disconnect()
   }, [])
 
   return (
-    <section id="problem" className="py-20 bg-gradient-to-b from-white to-gray-50">
+    <section ref={sectionRef} className="py-20 bg-gradient-to-b from-white to-gray-50">
       <div className="container mx-auto px-4">
-        <div className="max-w-6xl mx-auto">
-          
-          {/* Section Header */}
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-red-50 to-orange-50 rounded-full mb-6">
-              <span className="text-sm font-medium text-red-600">🚨 The Double Brand Blockade</span>
-            </div>
-            
-            <h2 className="text-4xl md:text-5xl font-bold font-space-grotesk mb-6">
-              Why Most Creators Stay <br />
-              <span className="bg-gradient-to-r from-red-500 to-orange-600 bg-clip-text text-transparent">
-                Generic & Invisible
-              </span>
-            </h2>
-            
-            <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-              Two critical blockades prevent creators from building authentic, differentiated brands. 
-              Most platforms solve only one - or neither. We solve both.
-            </p>
-          </div>
+        
+        {/* Section Header */}
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold font-space-grotesk mb-6">
+            The <span className="bg-gradient-to-r from-red-500 to-coral-500 bg-clip-text text-transparent">Double Brand Blockade</span>
+          </h2>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            Creators, freelancers, and consultants struggle with two fundamental challenges 
+            that paralyze their brand development and limit their success.
+          </p>
+        </div>
 
-          {/* Interactive Blockade Cards */}
-          <div className="grid lg:grid-cols-2 gap-8 mb-16">
-            {blockades.map((blockade, index) => (
-              <div 
-                key={index}
-                className={`transform transition-all duration-700 ${
-                  animatedCards.includes(index) 
-                    ? 'opacity-100 translate-y-0' 
-                    : 'opacity-0 translate-y-10'
-                }`}
-                onMouseEnter={() => setActiveBlockade(index)}
-              >
-                <div className={`relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 border-2 cursor-pointer h-full ${
-                  activeBlockade === index 
-                    ? `border-${blockade.color}-300 shadow-${blockade.color}-100` 
-                    : 'border-gray-100 hover:border-gray-200'
-                }`}>
-                  
-                  {/* Active Indicator */}
-                  {activeBlockade === index && (
-                    <div className={`absolute -top-2 -right-2 w-4 h-4 bg-${blockade.color}-500 rounded-full animate-pulse`}></div>
-                  )}
-
-                  {/* Icon & Title */}
-                  <div className="text-center mb-6">
-                    <div className="text-6xl mb-4">
-                      {blockade.icon}
-                    </div>
-                    <h3 className="text-2xl font-bold font-space-grotesk mb-2">
-                      {blockade.title}
-                    </h3>
+        {/* Problem Cards */}
+        <div className="grid md:grid-cols-3 gap-8 mb-16">
+          {problems.map((problem, index) => (
+            <div 
+              key={index}
+              className={`transform transition-all duration-700 ${
+                visibleProblems.includes(index) 
+                  ? 'opacity-100 translate-y-0' 
+                  : 'opacity-0 translate-y-10'
+              }`}
+              style={{ transitionDelay: `${index * 100}ms` }}
+            >
+              <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-100 h-full">
+                
+                {/* Visual & Stat */}
+                <div className="text-center mb-6">
+                  <div className="text-6xl mb-4 filter grayscale">
+                    {problem.visual}
                   </div>
-
-                  {/* Description */}
-                  <p className="text-gray-600 mb-6 leading-relaxed text-center">
-                    {blockade.description}
-                  </p>
-
-                  {/* Details */}
-                  <div className="space-y-3 mb-6">
-                    {blockade.details.map((detail, detailIndex) => (
-                      <div key={detailIndex} className="flex items-start">
-                        <div className={`w-2 h-2 bg-${blockade.color}-400 rounded-full mr-3 flex-shrink-0 mt-2`}></div>
-                        <span className="text-sm text-gray-600">{detail}</span>
-                      </div>
-                    ))}
+                  <div className="bg-red-50 rounded-full px-4 py-2 inline-block">
+                    <span className="text-2xl font-bold text-red-600">{problem.stat}</span>
+                    <div className="text-xs text-red-500 font-medium">{problem.statLabel}</div>
                   </div>
+                </div>
 
-                  {/* Impact */}
-                  <div className={`p-4 bg-${blockade.color}-50 rounded-lg border border-${blockade.color}-200`}>
-                    <p className={`text-sm font-medium text-${blockade.color}-700`}>
-                      {blockade.impact}
-                    </p>
+                {/* Content */}
+                <h3 className="text-xl font-bold font-space-grotesk mb-3 text-center">
+                  {problem.title}
+                </h3>
+                
+                <p className="text-gray-600 mb-4 text-center font-medium">
+                  {problem.description}
+                </p>
+                
+                <p className="text-sm text-gray-500 leading-relaxed">
+                  {problem.details}
+                </p>
+
+                {/* Problem Indicator */}
+                <div className="mt-6 pt-4 border-t border-gray-100">
+                  <div className="flex items-center justify-center text-red-500">
+                    <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clipRule="evenodd" />
+                    </svg>
+                    <span className="text-sm font-medium">Blocks success</span>
                   </div>
                 </div>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
+        </div>
 
-          {/* Real Creator Scenarios */}
-          <div className="bg-gradient-to-r from-gray-50 to-white rounded-2xl p-8 md:p-12">
-            <h3 className="text-2xl md:text-3xl font-bold font-space-grotesk text-center mb-8">
-              Real Creator Struggles
-            </h3>
+        {/* Impact Statement */}
+        <div className="bg-gradient-to-r from-red-50 to-coral-50 rounded-2xl p-8 md:p-12 text-center border border-red-100">
+          <h3 className="text-2xl md:text-3xl font-bold font-space-grotesk mb-4">
+            Die Konsequenz: Ein Teufelskreis aus Austauschbarkeit und Frustration
+          </h3>
+          
+          <div className="grid md:grid-cols-2 gap-8 mt-8">
+            <div className="space-y-4">
+              <h4 className="font-semibold text-lg text-red-700">Ohne klaren Brand Kernel:</h4>
+              <ul className="space-y-2 text-gray-600">
+                <li className="flex items-center">
+                  <svg className="w-5 h-5 text-red-500 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clipRule="evenodd" />
+                  </svg>
+                  Preisdruck durch Austauschbarkeit
+                </li>
+                <li className="flex items-center">
+                  <svg className="w-5 h-5 text-red-500 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clipRule="evenodd" />
+                  </svg>
+                  Ineffektives Marketing & Content
+                </li>
+                <li className="flex items-center">
+                  <svg className="w-5 h-5 text-red-500 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clipRule="evenodd" />
+                  </svg>
+                  Schwache Kundenbindung & Weiterempfehlungen
+                </li>
+                <li className="flex items-center">
+                  <svg className="w-5 h-5 text-red-500 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clipRule="evenodd" />
+                  </svg>
+                  Burnout durch ständiges "Alles für alle"
+                </li>
+              </ul>
+            </div>
             
-            <div className="grid md:grid-cols-3 gap-8">
-              {scenarios.map((scenario, index) => (
-                <div key={index} className="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
-                  <div className="flex items-center mb-4">
-                    <span className="text-3xl mr-3">{scenario.icon}</span>
-                    <h4 className="font-semibold text-gray-800">{scenario.persona}</h4>
-                  </div>
-                  
-                  <blockquote className="text-gray-600 italic mb-4 leading-relaxed">
-                    {scenario.problem}
-                  </blockquote>
-                  
-                  <div className="flex items-center">
-                    <span className="text-xs font-medium text-gray-500 uppercase tracking-wide mr-2">
-                      Affected by:
-                    </span>
-                    <span className={`inline-flex items-center px-2 py-1 rounded-full text-xs font-medium ${
-                      scenario.blockade === 'both' ? 'bg-purple-50 text-purple-600' :
-                      scenario.blockade === 'foundation' ? 'bg-red-50 text-red-600' :
-                      'bg-orange-50 text-orange-600'
-                    }`}>
-                      {scenario.blockade === 'both' ? 'Both Blockades' :
-                       scenario.blockade === 'foundation' ? 'Foundation Problem' :
-                       'Activation Problem'}
-                    </span>
-                  </div>
-                </div>
-              ))}
+            <div className="space-y-4">
+              <h4 className="font-semibold text-lg text-coral-700">Mit authentischem Brand Kernel:</h4>
+              <ul className="space-y-2 text-gray-600">
+                <li className="flex items-center">
+                  <svg className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  </svg>
+                  Premium-Pricing durch Differenzierung
+                </li>
+                <li className="flex items-center">
+                  <svg className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  </svg>
+                  Ideale Kunden finden dich magnetisch
+                </li>
+                <li className="flex items-center">
+                  <svg className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  </svg>
+                  Klarer Fokus steigert Effizienz
+                </li>
+                <li className="flex items-center">
+                  <svg className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  </svg>
+                  Erfüllung durch authentisches Arbeiten
+                </li>
+              </ul>
             </div>
           </div>
 
-          {/* Solution Preview */}
-          <div className="text-center mt-16">
-            <div className="bg-gradient-to-r from-coral-50 to-purple-50 rounded-2xl p-8 border border-coral-200">
-              <h3 className="text-2xl font-bold font-space-grotesk mb-4">
-                The Integrated Solution
-              </h3>
-              <p className="text-lg text-gray-700 mb-6 max-w-3xl mx-auto">
-                BrandKernel.io solves both blockades through an integrated platform: 
-                <span className="font-semibold text-coral-600">Deep AI dialogue</span> for your foundation + 
-                <span className="font-semibold text-purple-600">intelligent flows</span> for daily activation.
-              </p>
-              <button className="bg-gradient-to-r from-coral-500 to-coral-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-coral-600 hover:to-coral-700 transition-all duration-300">
-                See How We Solve This
-              </button>
-            </div>
+          <div className="mt-8 pt-6 border-t border-coral-200">
+            <p className="text-lg font-medium text-gray-700">
+              <span className="text-coral-600 font-bold">Der Brand Kernel</span> ist im KI-Zeitalter der entscheidende, 
+              <span className="bg-yellow-100 px-2 py-1 rounded font-semibold">nicht-kopierbare Wettbewerbsfaktor</span>
+            </p>
+          </div>
+        </div>
+
+        {/* Transition to Solution */}
+        <div className="text-center mt-16">
+          <p className="text-xl text-gray-600 mb-8">
+            We believe: Every creator has a unique kernel. <br />
+            <span className="font-semibold text-coral-600">We're building the intelligence to help you find yours.</span>
+          </p>
+          
+          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-coral-500 to-red-500 text-white rounded-full font-medium">
+            <span>The Solution ↓</span>
           </div>
         </div>
       </div>
