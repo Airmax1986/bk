@@ -38,7 +38,7 @@ export default function WaitlistSection() {
               </div>
 
               <a
-                href="https://tally.so/r/mVXDpQ"
+                href="https://brandkernel.kit.com/profile?_gl=1*w8l014*_gcl_au*MTUzNjY5NTA1MS4xNzQ2NzQyOTA3"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block w-full py-4 bg-gradient-to-r from-coral-500 to-coral-600 text-white font-semibold rounded-lg hover:from-coral-600 hover:to-coral-700 transition-all duration-300 mb-6"
