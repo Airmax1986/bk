@@ -36,7 +36,7 @@ export default function ThoughtLeadershipTeaser() {
   }, [insights.length])
 
   return (
-    <section className="py-20 bg-white">
+    <section id="insights" className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           
