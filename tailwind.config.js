@@ -7,6 +7,10 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        'sans': ['var(--font-inter)', 'Inter', 'system-ui', 'sans-serif'],
+        'space-grotesk': ['var(--font-space-grotesk)', 'Space Grotesk', 'system-ui', 'sans-serif'],
+      },
       typography: {
         DEFAULT: {
           css: {
@@ -25,5 +29,6 @@ module.exports = {
   },
   plugins: [
     require('@tailwindcss/typography'),
+    require('@tailwindcss/line-clamp'),
   ],
 }
