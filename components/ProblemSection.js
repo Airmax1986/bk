@@ -123,66 +123,66 @@ export default function ProblemSection() {
         {/* Impact Statement */}
         <div className="bg-gradient-to-r from-red-50 to-coral-50 rounded-2xl p-8 md:p-12 text-center border border-red-100">
           <h3 className="text-2xl md:text-3xl font-bold font-space-grotesk mb-4">
-            Die Konsequenz: Ein Teufelskreis aus Austauschbarkeit und Frustration
+            The Consequence: A Vicious Cycle of Interchangeability and Frustration
           </h3>
           
           <div className="grid md:grid-cols-2 gap-8 mt-8">
             <div className="space-y-4">
-              <h4 className="font-semibold text-lg text-red-700">Ohne klaren Brand Kernel:</h4>
+              <h4 className="font-semibold text-lg text-red-700">Without a Clear Brand Kernel:</h4>
               <ul className="space-y-2 text-gray-600">
                 <li className="flex items-center">
                   <svg className="w-5 h-5 text-red-500 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clipRule="evenodd" />
                   </svg>
-                  Preisdruck durch Austauschbarkeit
+                  Price pressure due to interchangeability
                 </li>
                 <li className="flex items-center">
                   <svg className="w-5 h-5 text-red-500 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clipRule="evenodd" />
                   </svg>
-                  Ineffektives Marketing & Content
+                  Ineffective marketing & content
                 </li>
                 <li className="flex items-center">
                   <svg className="w-5 h-5 text-red-500 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clipRule="evenodd" />
                   </svg>
-                  Schwache Kundenbindung & Weiterempfehlungen
+                  Weak customer loyalty & referrals
                 </li>
                 <li className="flex items-center">
                   <svg className="w-5 h-5 text-red-500 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clipRule="evenodd" />
                   </svg>
-                  Burnout durch ständiges "Alles für alle"
+                  Burnout from constant "everything for everyone"
                 </li>
               </ul>
             </div>
             
             <div className="space-y-4">
-              <h4 className="font-semibold text-lg text-coral-700">Mit authentischem Brand Kernel:</h4>
+              <h4 className="font-semibold text-lg text-coral-700">With an Authentic Brand Kernel:</h4>
               <ul className="space-y-2 text-gray-600">
                 <li className="flex items-center">
                   <svg className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                   </svg>
-                  Premium-Pricing durch Differenzierung
+                  Premium pricing through differentiation
                 </li>
                 <li className="flex items-center">
                   <svg className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                   </svg>
-                  Ideale Kunden finden dich magnetisch
+                  Ideal clients find you magnetically
                 </li>
                 <li className="flex items-center">
                   <svg className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                   </svg>
-                  Klarer Fokus steigert Effizienz
+                  Clear focus increases efficiency
                 </li>
                 <li className="flex items-center">
                   <svg className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                   </svg>
-                  Erfüllung durch authentisches Arbeiten
+                  Fulfillment through authentic work
                 </li>
               </ul>
             </div>
@@ -190,8 +190,8 @@ export default function ProblemSection() {
 
           <div className="mt-8 pt-6 border-t border-coral-200">
             <p className="text-lg font-medium text-gray-700">
-              <span className="text-coral-600 font-bold">Der Brand Kernel</span> ist im KI-Zeitalter der entscheidende, 
-              <span className="bg-yellow-100 px-2 py-1 rounded font-semibold">nicht-kopierbare Wettbewerbsfaktor</span>
+              <span className="text-coral-600 font-bold">The Brand Kernel</span> is the decisive, 
+              <span className="bg-yellow-100 px-2 py-1 rounded font-semibold">non-copyable competitive factor</span> in the AI age
             </p>
           </div>
         </div>
