@@ -2,8 +2,6 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { getAllPosts } from '../../lib/contentful'
 import { draftMode } from 'next/headers'
-import Navigation from '../../components/Navigation'
-import Footer from '../../components/Footer'
 
 export default async function BlogPage() {
   const { isEnabled } = draftMode()
@@ -11,7 +9,6 @@ export default async function BlogPage() {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <Navigation />
       
       {/* Blog Header */}
       <section className="pt-24 pb-16 bg-gradient-to-b from-white to-gray-50">
@@ -147,8 +144,6 @@ export default async function BlogPage() {
           )}
         </div>
       </section>
-
-      <Footer />
     </div>
   )
 }
