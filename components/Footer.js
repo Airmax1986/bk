@@ -8,16 +8,16 @@ export default function Footer() {
       { href: '/about', label: 'About' },
       { href: '/blog', label: 'Brand Intelligence' },
       { href: '/manifesto', label: 'Manifesto' },
-      { href: 'https://tally.so/r/mVXDpQ', label: 'Join Waitlist', external: true },
+      { href: 'https://brandkernel.kit.com/profile?_gl=1*w8l014*_gcl_au*MTUzNjY5NTA1MS4xNzQ2NzQyOTA3', label: 'Join Waitlist', external: true },
     ],
     resources: [
       { href: '/blog', label: 'Brand Intelligence Hub' },
       { href: '/about', label: 'Our Mission' },
       { href: '/manifesto', label: 'Brand Philosophy' },
-      { href: 'https://tally.so/r/mVXDpQ', label: 'Get Early Access', external: true },
+      { href: 'https://brandkernel.kit.com/profile?_gl=1*w8l014*_gcl_au*MTUzNjY5NTA1MS4xNzQ2NzQyOTA3', label: 'Get Early Access', external: true },
     ],
     legal: [
-      { href: 'mailto:hello@brandkernel.io', label: 'Contact', external: true },
+      { href: 'mailto:mail@brandkernel.io', label: 'Contact', external: true },
       { href: '/impressum', label: 'Impressum' },
       { href: '/privacy', label: 'Privacy Policy' },
       { href: '/terms', label: 'Terms of Service' },
@@ -57,7 +57,7 @@ export default function Footer() {
                 </svg>
               </a>
               <a 
-                href="https://tally.so/r/mVXDpQ" 
+                href="https://brandkernel.kit.com/profile?_gl=1*w8l014*_gcl_au*MTUzNjY5NTA1MS4xNzQ2NzQyOTA3" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-8 h-8 bg-gray-200 hover:bg-coral-500 hover:text-white rounded-full flex items-center justify-center transition-colors"
