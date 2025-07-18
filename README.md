@@ -1,184 +1,226 @@
 # BK Blog
 
-Ein moderner Blog erstellt mit Next.js, React, Contentful und Vercel.
+Ein moderner Blog erstellt mit Next.js, React, Contentful und Vercel - basierend auf der offiziellen [Vercel Contentful Integration](https://vercel.com/docs/integrations/cms/contentful).
 
 ## 🚀 Features
 
 - ⚡ **Next.js 14** mit App Router
 - 🎨 **Tailwind CSS** für Styling
-- 📝 **Contentful** als Headless CMS
+- 📝 **Contentful** als Headless CMS (REST + GraphQL APIs)
 - 🖼️ **Optimierte Bilder** mit Next.js Image
 - 📱 **Responsive Design**
 - 🔄 **Automatische Revalidation** via Webhooks
 - 👀 **Preview Mode** für Draft-Inhalte
 - 🎯 **SEO-optimiert**
+- 🔧 **Content Model Setup-Script**
 
 ## 📋 Voraussetzungen
 
 - Node.js 18.17 oder höher
 - Contentful Account
-- Vercel Account
+- Vercel Account (optional für Deployment)
 - Git
 
-## 🛠️ Lokale Installation
+## 🛠️ Setup-Anleitung
 
-1. **Repository klonen:**
+### **Option 1: Mit Vercel Template (Empfohlen)**
+
+1. **Deploy mit einem Klick:**
+   - Nutze das [Vercel Contentful Template](https://vercel.com/templates/next.js/nextjs-blog-preview-mode)
+   - Vercel Integration wird automatisch installiert
+
+2. **Oder manuell klonen:**
    ```bash
+   pnpm create-next-app --example cms-contentful my-blog
+   # oder
    git clone https://github.com/Airmax1986/bk.git
    cd bk
-   ```
-
-2. **Dependencies installieren:**
-   ```bash
    npm install
    ```
 
-3. **Environment Variables einrichten:**
-   ```bash
-   cp .env.local.example .env.local
-   ```
-   
-   Fülle die `.env.local` mit deinen Contentful-Daten:
-   ```env
-   CONTENTFUL_SPACE_ID=your_space_id
-   CONTENTFUL_ACCESS_TOKEN=your_delivery_token
-   CONTENTFUL_PREVIEW_ACCESS_TOKEN=your_preview_token
-   CONTENTFUL_PREVIEW_SECRET=your_preview_secret
-   CONTENTFUL_REVALIDATE_SECRET=your_revalidate_secret
-   ```
+### **Option 2: Manueller Setup**
 
-4. **Entwicklungsserver starten:**
-   ```bash
-   npm run dev
-   ```
+#### **1. Contentful Space einrichten**
 
-## 🎯 Contentful Setup
+1. **Account erstellen:** [contentful.com](https://contentful.com)
+2. **Neuen Space erstellen** (z.B. "BK Blog")
+3. **Space ID notieren:** Settings → API Keys → Copy Space ID
 
-### 1. Contentful Space erstellen
-- Gehe zu [contentful.com](https://contentful.com)
-- Erstelle einen kostenlosen Account
-- Erstelle einen neuen Space
+#### **2. API Tokens generieren**
 
-### 2. Content Model erstellen
+**Content Delivery API Token:**
+- Settings → API Keys → Add API key
+- Für Production-Content
 
-**Post Content Type:**
-- **Title** (Short text, required)
-- **Slug** (Short text, required, unique)
-- **Content** (Long text, markdown)
-- **Excerpt** (Long text)
-- **Cover Image** (Media)
-- **Author** (Reference, optional)
+**Content Management API Token:**
+- Settings → API Keys → Content management tokens  
+- Generate personal token
+- ⚠️ **Nicht teilen** - hat Read/Write-Zugriff
+
+#### **3. Environment Variables einrichten**
+
+```bash
+# .env.local erstellen
+cp .env.local.example .env.local
+```
+
+**Erforderliche Variables:**
+```env
+CONTENTFUL_SPACE_ID=your_space_id_here
+CONTENTFUL_ACCESS_TOKEN=your_delivery_token_here
+CONTENTFUL_MANAGEMENT_TOKEN=your_management_token_here
+```
+
+**Optionale Variables:**
+```env
+CONTENTFUL_PREVIEW_ACCESS_TOKEN=your_preview_token
+CONTENTFUL_PREVIEW_SECRET=your_preview_secret
+CONTENTFUL_REVALIDATE_SECRET=your_revalidate_secret
+```
+
+#### **4. Content Model erstellen**
+
+**Automatisch mit Setup-Script:**
+```bash
+# Environment Variables setzen und Setup ausführen
+npx cross-env CONTENTFUL_SPACE_ID=YOUR_SPACE_ID CONTENTFUL_MANAGEMENT_TOKEN=XXX npm run setup
+```
+
+**Oder manuell in Contentful:**
 
 **Author Content Type:**
-- **Name** (Short text, required)
-- **Picture** (Media)
-- **Bio** (Long text)
+- Name (Short text, required)
+- Picture (Media)
+- Bio (Long text)
 
-### 3. API Keys generieren
-1. **Settings → API Keys → Add API Key**
-2. **Settings → CMA Tokens → Create personal access token**
+**blogPost Content Type:**
+- Slug (Short text, required, unique)
+- Title (Short text, required) 
+- Summary (Long text)
+- Header Image (Media)
+- Content (Long text)
+- Author (Reference to Author)
+- Date (Date & time)
+- heroImage (Media)
+- description (Short text)
+- tags (Short text, list)
+
+#### **5. Content hinzufügen**
+
+1. Contentful → Content → Add entry
+2. Erstelle Author und blogPost Entries
+3. **Publish** für Live-Content
+
+#### **6. Lokal starten**
+
+```bash
+npm install
+npm run dev
+# Öffne http://localhost:3000
+```
 
 ## 🚀 Vercel Deployment
 
-### 1. Vercel Setup
+### **1. Mit Vercel CLI**
 ```bash
-# Vercel CLI installieren (optional)
 npm i -g vercel
-
-# In Vercel deployen
 vercel
 ```
 
-### 2. Environment Variables in Vercel
-Gehe zum Vercel Dashboard → Projekt → Settings → Environment Variables:
-- `CONTENTFUL_SPACE_ID`
-- `CONTENTFUL_ACCESS_TOKEN`
-- `CONTENTFUL_PREVIEW_ACCESS_TOKEN`
-- `CONTENTFUL_PREVIEW_SECRET`
-- `CONTENTFUL_REVALIDATE_SECRET`
+### **2. Mit Git Integration**
+```bash
+git init
+git add .
+git commit -m "Initial commit"
+git remote add origin YOUR_REPO_URL
+git push -u origin main
+```
 
-### 3. Webhooks konfigurieren
+Dann in Vercel:
+1. **Import Project** von GitHub
+2. **Environment Variables hinzufügen:**
+   - `CONTENTFUL_SPACE_ID`
+   - `CONTENTFUL_ACCESS_TOKEN`
+3. **Deploy klicken**
 
-**Vercel Deploy Hook:**
+### **3. Webhooks konfigurieren**
+
+**Automatische Builds (Deploy Hook):**
 1. Vercel Dashboard → Settings → Git → Deploy Hooks
-2. Erstelle einen neuen Hook für Branch `main`
-3. Kopiere die generierte URL
+2. Neuen Hook für Branch "main" erstellen  
+3. URL kopieren
 
-**Contentful Webhook:**
-1. Contentful → Settings → Webhooks
-2. Use Vercel template
-3. Füge die Deploy Hook URL ein
+**In Contentful:**
+1. Settings → Webhooks → Templates → Vercel
+2. Deploy Hook URL einfügen
 
-**Revalidation Webhook:**
+**Content Revalidation:**
 1. Contentful → Settings → Webhooks → Add Webhook
-2. Name: "Revalidate"
+2. Name: "Revalidate"  
 3. URL: `https://your-domain.vercel.app/api/revalidate`
 4. Headers: `Authorization: Bearer your_revalidate_secret`
 
-## 📝 Content Management
+## 🔧 API-Optionen
 
-### Neuen Blog Post erstellen
-1. Contentful → Content → Add entry → Post
-2. Fülle Title, Slug, Content, etc.
-3. **Publish** für Live-Inhalt oder **Save** für Draft
+### **REST API (Standard)**
+```javascript
+import { getAllPosts, getPost } from '../lib/contentful'
+```
 
-### Preview Mode
-- Draft-Inhalte werden nur im Preview Mode angezeigt
-- URL: `https://your-domain.vercel.app/api/draft?secret=your_secret&slug=post-slug`
+### **GraphQL API (Empfohlen von Vercel)**
+```javascript  
+import { getAllPostsGraphQL, getPostGraphQL } from '../lib/contentful-graphql'
+```
 
 ## 📚 Verwendete Technologien
 
-- **Framework:** Next.js 14
-- **Styling:** Tailwind CSS
-- **CMS:** Contentful
+- **Framework:** Next.js 14 mit App Router
+- **Styling:** Tailwind CSS + Typography Plugin
+- **CMS:** Contentful (REST + GraphQL APIs)
 - **Hosting:** Vercel
-- **Language:** JavaScript
-- **Typography:** Tailwind Typography
+- **Language:** JavaScript/React
 
-## 🔧 Anpassungen
+## 🔍 Debug & Testing
 
-### Styling ändern
-- Bearbeite `tailwind.config.js` für Design-Tokens
-- Styles in `app/globals.css`
+**Environment Variables prüfen:**
+```bash
+# Nur in Development
+curl http://localhost:3000/api/debug/env
+```
 
-### Content Model erweitern
-- Neue Felder in Contentful hinzufügen
-- API-Funktionen in `lib/contentful.js` erweitern
+**Contentful Connection testen:**
+```bash
+# Logs in der Konsole beobachten beim Start
+npm run dev
+```
 
 ## 📖 Nützliche Links
 
-- [Next.js Dokumentation](https://nextjs.org/docs)
-- [Contentful Dokumentation](https://www.contentful.com/developers/docs/)
-- [Vercel Dokumentation](https://vercel.com/docs)
+- [Vercel Contentful Integration](https://vercel.com/docs/integrations/cms/contentful)
+- [Contentful GraphQL API](https://www.contentful.com/developers/docs/references/graphql/)
+- [Next.js App Router](https://nextjs.org/docs/app)
 - [Tailwind CSS](https://tailwindcss.com/docs)
 
 ## 🐛 Troubleshooting
 
-### Häufige Probleme
-
 **Build Errors:**
-- Überprüfe Environment Variables
-- Stelle sicher, dass Contentful Content veröffentlicht ist
+- Überprüfe Environment Variables in Vercel
+- Stelle sicher, dass Content in Contentful published ist
+- Validiere Content Model Structure
+
+**API Errors:**
+- Check Contentful API Keys in Dashboard
+- Validate Space ID
+- Review Network tab in Browser DevTools
 
 **Images laden nicht:**
-- Kontrolliere `next.config.mjs` Image-Konfiguration
+- Kontrolliere `next.config.mjs` Image-Domains
 - Vercel Domain in Contentful Media settings
-
-**Webhooks funktionieren nicht:**
-- Überprüfe Authorization Header
-- Teste Webhook URLs manuell
 
 ## 📄 Lizenz
 
 MIT License
 
-## 👥 Contributing
-
-1. Fork das Repository
-2. Erstelle einen Feature Branch
-3. Committe deine Änderungen
-4. Erstelle einen Pull Request
-
 ---
 
-**Erstellt mit ❤️ und Next.js**
+**Erstellt nach der offiziellen Vercel Contentful Integration** 🚀
