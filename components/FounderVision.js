@@ -38,7 +38,7 @@ export default function FounderVision() {
   }, [])
 
   return (
-    <section className="py-20 bg-gradient-to-b from-white via-gray-50 to-white">
+    <section id="vision" className="py-20 bg-gradient-to-b from-white via-gray-50 to-white">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           
