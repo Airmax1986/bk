@@ -10,7 +10,7 @@ export default function Navigation() {
 
   const links = [
     { href: '/', label: 'Home' },
-    { href: '/blog', label: 'Brand Intelligence' },
+    { href: '/blog', label: 'Brand Intelligence Hub' },
     { href: '/about', label: 'About' },
     { href: '/manifesto', label: 'Manifesto' },
   ]
