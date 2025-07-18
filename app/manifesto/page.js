@@ -1,11 +1,8 @@
-import Navigation from '../../components/Navigation'
-import Footer from '../../components/Footer'
 import Link from 'next/link'
 
 export default function ManifestoPage() {
   return (
     <div className="min-h-screen bg-white">
-      <Navigation />
       
       {/* Hero Section */}
       <section className="pt-24 pb-16 bg-gradient-to-b from-gray-50 to-white">
@@ -170,8 +167,6 @@ export default function ManifestoPage() {
           </div>
         </div>
       </section>
-
-      <Footer />
     </div>
   )
 }
