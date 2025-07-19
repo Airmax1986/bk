@@ -1,7 +1,7 @@
 import { getAllPosts } from '../lib/contentful'
 
 // Basis-URL Ihrer Website
-const WEBSITE_URL = 'https://brandkernel.io'
+const WEBSITE_URL = 'https://www.brandkernel.io'
 
 // Statische Seiten der Website
 const STATIC_PAGES = [
