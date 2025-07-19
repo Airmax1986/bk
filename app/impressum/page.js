@@ -7,7 +7,7 @@ export default function ImpressumPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h1 className="text-4xl md:text-5xl font-bold font-space-grotesk mb-6">
-              Impressum
+              Imprint
             </h1>
             <p className="text-xl text-gray-600 leading-relaxed">
               Legal information and contact details for BrandKernel.io
@@ -26,7 +26,8 @@ export default function ImpressumPage() {
             <p>
               <strong>Maximilian Appelt</strong><br />
               BrandKernel.io<br />
-              [Address to be provided]<br />
+              Wolbecker Str. 94<br />
+              48155 Münster<br />
               Germany
             </p>
 
@@ -39,7 +40,8 @@ export default function ImpressumPage() {
             <h3>Responsible for content according to § 55 Abs. 2 RStV</h3>
             <p>
               Maximilian Appelt<br />
-              [Address to be provided]<br />
+              Wolbecker Str. 94<br />
+              48155 Münster<br />
               Germany
             </p>
 
@@ -87,7 +89,7 @@ export default function ImpressumPage() {
 }
 
 export const metadata = {
-  title: 'Impressum - BrandKernel.io',
+  title: 'Imprint - BrandKernel.io',
   description: 'Legal information and contact details for BrandKernel.io',
-  keywords: 'impressum, legal, contact, brandkernel',
+  keywords: 'imprint, legal, contact, brandkernel',
 }

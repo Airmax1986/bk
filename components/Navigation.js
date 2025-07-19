@@ -87,12 +87,14 @@ export default function Navigation() {
             ))}
             
             {/* CTA Button */}
-            <Link
-              href="#waitlist"
+            <a
+              href="https://brandkernel.kit.com/profile?_gl=1*w8l014*_gcl_au*MTUzNjY5NTA1MS4xNzQ2NzQyOTA3"
+              target="_blank"
+              rel="noopener noreferrer"
               className="px-6 py-2.5 bg-gradient-to-r from-coral-500 to-coral-600 text-white rounded-lg font-medium hover:from-coral-600 hover:to-coral-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-coral-lg text-sm"
             >
-              Reserve Now
-            </Link>
+              Join Waitlist
+            </a>
           </div>
 
           {/* Mobile menu button */}
@@ -144,13 +146,15 @@ export default function Navigation() {
             ))}
             
             {/* Mobile CTA */}
-            <Link
-              href="#waitlist"
+            <a
+              href="https://brandkernel.kit.com/profile?_gl=1*w8l014*_gcl_au*MTUzNjY5NTA1MS4xNzQ2NzQyOTA3"
+              target="_blank"
+              rel="noopener noreferrer"
               className="block px-4 py-3 bg-gradient-to-r from-coral-500 to-coral-600 text-white rounded-xl font-medium hover:from-coral-600 hover:to-coral-700 transition-all duration-300 text-center mt-4"
               onClick={() => setIsOpen(false)}
             >
-              Reserve Now
-            </Link>
+              Join Waitlist
+            </a>
             
             {/* Mobile Social Proof */}
             <div className="px-4 py-3 text-center">
