@@ -75,7 +75,14 @@ export default function FounderVision() {
                   
                   <div>
                     <h3 className="text-2xl font-bold font-space-grotesk mb-2">
-                      Max Schmidt
+                      <a 
+                        href="https://de.linkedin.com/in/maximilian-appelt-a1579bb8" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="hover:text-blue-600 transition-colors duration-200"
+                      >
+                        Maximilian Appelt
+                      </a>
                     </h3>
                     <p className="text-blue-600 font-medium mb-4">
                       Founder & Brand Strategist
@@ -105,6 +112,19 @@ export default function FounderVision() {
                           <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                         </svg>
                         AI & strategic framework expertise
+                      </div>
+                      <div className="flex items-center">
+                        <svg className="w-4 h-4 mr-2 text-blue-500" fill="currentColor" viewBox="0 0 24 24">
+                          <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                        </svg>
+                        <a 
+                          href="https://de.linkedin.com/in/maximilian-appelt-a1579bb8" 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="text-blue-600 hover:text-blue-700 transition-colors"
+                        >
+                          Connect on LinkedIn
+                        </a>
                       </div>
                     </div>
                   </div>
@@ -264,9 +284,14 @@ export default function FounderVision() {
                 Be part of the revolution that's democratizing brand strategy. 
                 Help us build a platform that serves creators, not just corporations.
               </p>
-              <button className="bg-gradient-to-r from-coral-500 to-coral-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-coral-600 hover:to-coral-700 transition-all duration-300">
+              <a 
+                href="https://kit.com/brandkernel" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="bg-gradient-to-r from-coral-500 to-coral-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-coral-600 hover:to-coral-700 transition-all duration-300 inline-block"
+              >
                 Reserve Your Brand Discovery
-              </button>
+              </a>
             </div>
           </div>
         </div>
