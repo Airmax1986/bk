@@ -89,9 +89,8 @@ export default function FounderVision() {
                     </p>
                     
                     <blockquote className="text-gray-700 italic leading-relaxed mb-6">
-                      "After years of helping clients build authentic brands, I realized the biggest barrier 
-                      wasn't expertise - it was accessibility. Strategic brand thinking should be available 
-                      to every creator, not just those who can afford $50k consultancy fees."
+                      "After 20+ years in brand consulting, I've learned that most creators are just one conversation away from clarity. 
+                      Traditional consulting is powerful but not scalable. BrandKernel.io makes that deep strategic dialogue accessible to everyone."
                     </blockquote>
                     
                     <div className="space-y-2 text-sm text-gray-600">
@@ -99,19 +98,25 @@ export default function FounderVision() {
                         <svg className="w-4 h-4 mr-2 text-blue-500" fill="currentColor" viewBox="0 0 20 20">
                           <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                         </svg>
-                        10+ years in brand strategy & consulting
+                        20+ years in brand consulting & strategy
                       </div>
                       <div className="flex items-center">
                         <svg className="w-4 h-4 mr-2 text-blue-500" fill="currentColor" viewBox="0 0 20 20">
                           <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                         </svg>
-                        Worked with 200+ personal brands
+                        M.A. Visual Communication & Design
                       </div>
                       <div className="flex items-center">
                         <svg className="w-4 h-4 mr-2 text-blue-500" fill="currentColor" viewBox="0 0 20 20">
                           <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                         </svg>
-                        AI & strategic framework expertise
+                        Launched 2 e-commerce startups
+                      </div>
+                      <div className="flex items-center">
+                        <svg className="w-4 h-4 mr-2 text-blue-500" fill="currentColor" viewBox="0 0 20 20">
+                          <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                        </svg>
+                        Building as Solopreneur & Dad
                       </div>
                       <div className="flex items-center">
                         <svg className="w-4 h-4 mr-2 text-blue-500" fill="currentColor" viewBox="0 0 24 24">
@@ -285,7 +290,7 @@ export default function FounderVision() {
                 Help us build a platform that serves creators, not just corporations.
               </p>
               <a 
-                href="https://brandkernel.kit.com/profile?_gl=1*w8l014*_gcl_au*MTUzNjY5NTA1MS4xNzQ2NzQyOTA3" 
+                href="https://brandkernel.kit.com/profile?_gl=1*w8l014*_gcl_au*MTUzNjY5NTA1MS4xNzQ2NzQyOTA7" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="bg-gradient-to-r from-coral-500 to-coral-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-coral-600 hover:to-coral-700 transition-all duration-300 inline-block"
