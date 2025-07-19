@@ -1,5 +1,6 @@
 'use client'
 import { useState, useEffect } from 'react'
+import Image from 'next/image'
 
 export default function FounderVision() {
   const [activeTab, setActiveTab] = useState(0)
@@ -69,11 +70,29 @@ export default function FounderVision() {
             }`}>
               <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
                 <div className="flex items-start space-x-6">
-                  <div className="w-16 h-16 bg-gradient-to-br from-blue-400 to-purple-600 rounded-full flex items-center justify-center flex-shrink-0">
-                    <span className="text-white font-bold text-xl">M</span>
+                  {/* Founder Photo */}
+                  <div className="flex-shrink-0">
+                    <div className="w-20 h-20 rounded-full overflow-hidden shadow-lg ring-4 ring-blue-100">
+                      <Image
+                        src="/maximilian-appelt.jpg"
+                        alt="Maximilian Appelt - Founder of BrandKernel.io"
+                        width={80}
+                        height={80}
+                        className="w-full h-full object-cover"
+                        onError={(e) => {
+                          // Fallback to gradient avatar if image fails to load
+                          e.target.style.display = 'none'
+                          e.target.nextElementSibling.style.display = 'flex'
+                        }}
+                      />
+                      {/* Fallback gradient avatar */}
+                      <div className="w-full h-full bg-gradient-to-br from-blue-400 to-purple-600 rounded-full flex items-center justify-center text-white font-bold text-2xl" style={{display: 'none'}}>
+                        M
+                      </div>
+                    </div>
                   </div>
                   
-                  <div>
+                  <div className="flex-1">
                     <h3 className="text-2xl font-bold font-space-grotesk mb-2">
                       <a 
                         href="https://de.linkedin.com/in/maximilian-appelt-a1579bb8" 
