@@ -6,7 +6,7 @@ Das Repository verwendet jetzt ein **automatisches Sitemap-System**, das sich se
 
 ### Automatische Sitemap-Generierung
 - **Datei**: `app/sitemap.js`
-- **URL**: `https://brandkernel.io/sitemap.xml`
+- **URL**: `https://www.brandkernel.io/sitemap.xml`
 - **Update**: Automatisch bei jedem Build/Deployment
 
 ### Was wird automatisch inkludiert:
@@ -51,7 +51,7 @@ Das Repository verwendet jetzt ein **automatisches Sitemap-System**, das sich se
 
 ## 📊 Google Search Console
 
-1. **Sitemap URL einreichen**: `https://brandkernel.io/sitemap.xml`
+1. **Sitemap URL einreichen**: `https://www.brandkernel.io/sitemap.xml`
 2. **Automatische Updates**: Die Sitemap aktualisiert sich selbst
 3. **Überwachung**: Prüfen Sie regelmäßig auf Crawling-Fehler
 
