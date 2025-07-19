@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Homepage -->
+  <url>
+    <loc>https://brandkernel.io/</loc>
+    <lastmod>2025-07-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  
+  <!-- About Page -->
+  <url>
+    <loc>https://brandkernel.io/about</loc>
+    <lastmod>2025-07-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Blog Overview -->
+  <url>
+    <loc>https://brandkernel.io/blog</loc>
+    <lastmod>2025-07-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <!-- Manifesto Page -->
+  <url>
+    <loc>https://brandkernel.io/manifesto</loc>
+    <lastmod>2025-07-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Impressum -->
+  <url>
+    <loc>https://brandkernel.io/impressum</loc>
+    <lastmod>2025-07-19</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  
+  <!-- 
+  Hinweis: Für dynamische Blog-Posts sollten Sie die URLs hier manuell hinzufügen 
+  oder ein automatisiertes System implementieren, das die Sitemap basierend auf 
+  Ihren Contentful-Inhalten generiert.
+  
+  Beispiel für Blog-Posts:
+  <url>
+    <loc>https://brandkernel.io/posts/ihr-blog-post-slug</loc>
+    <lastmod>2025-07-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  -->
+</urlset>
