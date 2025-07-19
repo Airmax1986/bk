@@ -64,12 +64,14 @@ export default function HeroSection() {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-            <Link 
-              href="#waitlist"
+            <a 
+              href="https://brandkernel.kit.com/profile?_gl=1*w8l014*_gcl_au*MTUzNjY5NTA1MS4xNzQ2NzQyOTA3"
+              target="_blank"
+              rel="noopener noreferrer"
               className="px-8 py-4 bg-coral-500 text-white font-semibold rounded-lg hover:bg-coral-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
             >
               Reserve Your Brand Kernel Discovery
-            </Link>
+            </a>
             
             <Link 
               href="#manifesto"
