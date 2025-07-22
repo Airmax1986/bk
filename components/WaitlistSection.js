@@ -1,3 +1,4 @@
+// components/WaitlistSection.js
 'use client'
 
 export default function WaitlistSection() {
@@ -9,8 +10,8 @@ export default function WaitlistSection() {
         <div className="text-left mb-16">
           <h2 className="text-5xl md:text-6xl font-normal mb-4">
             <span className="text-gray-900">Now </span>
-            <span className="bg-gradient-to-r from-coral-500 to-purple-600 bg-clip-text text-transparent">
-              BrandKernel
+            <span className="bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent"> {/* Updated gradient for "Gemini" text */}
+              Gemini
             </span>
             <span className="text-gray-900"> can</span>
           </h2>
@@ -19,103 +20,58 @@ export default function WaitlistSection() {
         {/* Feature Cards - The Core Solution */}
         <div className="grid md:grid-cols-3 gap-6 mb-24">
           
-          {/* Deep Discovery Card */}
-          <div className="bg-gradient-to-br from-coral-600 via-coral-700 to-purple-800 rounded-2xl p-8 text-white relative overflow-hidden min-h-[400px] flex flex-col justify-between">
-            <div className="absolute top-6 right-6">
-              <button className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center hover:bg-white/30 transition-colors">
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
-                </svg>
-              </button>
+          {/* Gems Card (Screenshot 1: Left) */}
+          <div className="feature-card gems-gradient p-8 text-white flex flex-col justify-between"> {/* Use feature-card and gems-gradient */}
+            <button className="plus-button"> {/* Use plus-button class */}
+              +
+            </button>
+            <div className="flex-grow flex items-center justify-center">
+              {/* Icon from screenshot */}
+              <svg className="w-24 h-24 text-white opacity-80" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2L9.19 8.63L2 9.24L7.45 13.06L5.82 20L12 16.18L18.18 20L16.55 13.06L22 9.24L14.81 8.63L12 2Z" />
+              </svg>
             </div>
-
-            <div className="mt-16">
-              {/* Icon */}
-              <div className="mb-8">
-                <div className="w-16 h-16 rounded-2xl bg-white/20 flex items-center justify-center">
-                  <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-                  </svg>
-                </div>
-              </div>
-
-              <div>
-                <h3 className="text-lg font-medium mb-3">Deep Discovery</h3>
-                <p className="text-white/80 text-sm leading-relaxed">
-                  An empathetic AI coach that asks the questions strategists charge $5,000 for
-                </p>
-              </div>
+            <div>
+              <h3 className="card-title">Gems</h3> {/* Use card-title */}
+              <p className="card-subtitle">Create your own personal AI experts</p> {/* Use card-subtitle */}
             </div>
           </div>
 
-          {/* Brand Kernel Card */}
-          <div className="bg-gradient-to-br from-gray-800 via-gray-900 to-black rounded-2xl p-8 text-white relative overflow-hidden min-h-[400px] flex flex-col justify-center">
-            <div className="absolute top-6 right-6">
-              <button className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center hover:bg-white/30 transition-colors">
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
-                </svg>
-              </button>
-            </div>
-
+          {/* Gemini Live Card (Screenshot 1: Middle) */}
+          <div className="feature-card live-gradient p-8 text-white flex flex-col justify-end"> {/* Use feature-card and live-gradient */}
+            <button className="plus-button"> {/* Use plus-button class */}
+              +
+            </button>
             <div className="text-center">
-              <div className="mb-8">
-                <div className="w-16 h-16 rounded-2xl bg-white/20 flex items-center justify-center mx-auto">
-                  <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
-                  </svg>
-                </div>
-              </div>
-              <h3 className="text-4xl font-normal mb-6">Your Brand Kernel</h3>
-              <p className="text-white/70 text-base">
-                Your authentic core crystallized into your personal Brand Book
-              </p>
+              <h3 className="card-title text-4xl font-semibold">Gemini Live</h3> {/* Use card-title, larger text */}
+              <p className="card-subtitle text-lg">Have a real back and forth conversation.</p> {/* Use card-subtitle, larger text */}
             </div>
           </div>
 
-          {/* Brand Flows Card */}
-          <div className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 rounded-2xl p-8 text-white relative overflow-hidden min-h-[400px] flex flex-col justify-between">
-            <div className="absolute top-6 right-6">
-              <button className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center hover:bg-white/30 transition-colors">
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+          {/* Deep Research Card (Screenshot 1: Right) */}
+          <div className="feature-card research-gradient p-8 text-white flex flex-col justify-end"> {/* Use feature-card and research-gradient */}
+            <button className="plus-button"> {/* Use plus-button class */}
+              +
+            </button>
+            <div className="text-center">
+              {/* Icon from screenshot */}
+              <div className="mb-4">
+                <svg className="w-10 h-10 mx-auto text-white opacity-80" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/>
                 </svg>
-              </button>
-            </div>
-
-            {/* Background Pattern */}
-            <div className="absolute inset-0 opacity-30">
-              <div className="w-full h-full" style={{
-                backgroundImage: `radial-gradient(circle at 20% 50%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
-                                 radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.3) 0%, transparent 50%),
-                                 radial-gradient(circle at 40% 80%, rgba(120, 219, 255, 0.3) 0%, transparent 50%)`
-              }} />
-            </div>
-
-            <div className="relative z-10">
-              {/* Icon */}
-              <div className="mb-8">
-                <div className="w-16 h-16 rounded-2xl bg-white/20 flex items-center justify-center">
-                  <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                  </svg>
-                </div>
               </div>
-
-              <div>
-                <h3 className="text-lg font-medium mb-3">Brand Flows</h3>
-                <p className="text-white/80 text-sm leading-relaxed">
-                  Automated flows that transform your kernel into compelling content
-                </p>
-                <div className="mt-4">
-                  <span className="text-xs bg-white/20 px-2 py-1 rounded-full">Coming Soon</span>
-                </div>
-              </div>
+              <h3 className="card-title">Deep Research</h3> {/* Use card-title */}
+              <p className="card-subtitle">Create personalized research plans</p> {/* Use card-subtitle */}
             </div>
           </div>
         </div>
 
+        {/* The following sections are from the original WaitlistSection but are not in the Gemini screenshots.
+            You can decide to keep them, move them to another page, or remove them if you want to strictly match the screenshots.
+            For now, I'm commenting them out to focus on the Gemini design.
+        */}
         {/* Problem Statement - Minimal */}
+        {/*
         <div className="text-center mb-24 max-w-4xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-normal mb-6 text-gray-900">
             Most creators are <span className="bg-yellow-100 px-2 py-1 rounded font-semibold">one conversation away from clarity</span>
@@ -125,8 +81,10 @@ export default function WaitlistSection() {
             discover their authentic brand identity and activate it daily.
           </p>
         </div>
+        */}
 
         {/* Founder Quote - Minimal */}
+        {/*
         <div className="bg-white rounded-3xl p-12 text-center mb-24 shadow-sm">
           <div className="w-16 h-16 bg-gradient-to-br from-coral-400 to-coral-600 rounded-full flex items-center justify-center mx-auto mb-6">
             <span className="text-white font-bold text-xl">M</span>
@@ -139,11 +97,12 @@ export default function WaitlistSection() {
             <strong>Maximilian Appelt</strong>, Founder & Brand Strategist
           </cite>
         </div>
+        */}
 
         {/* Waitlist CTA Section - Using EXACT text from main branch */}
+        {/*
         <div className="bg-gradient-to-br from-coral-400 via-coral-500 to-purple-600 rounded-3xl p-12 text-white relative overflow-hidden min-h-[400px] flex items-center">
           
-          {/* Background Pattern */}
           <div className="absolute inset-0 opacity-20">
             <div className="w-full h-full" style={{
               backgroundImage: `radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.2) 0%, transparent 50%),
@@ -171,7 +130,6 @@ export default function WaitlistSection() {
               Reserve Your Brand Kernel Discovery
             </a>
 
-            {/* Social Proof */}
             <div className="mt-8 flex items-center justify-center gap-8 text-sm text-white/80">
               <div className="flex items-center">
                 <div className="flex -space-x-2 mr-3">
@@ -183,7 +141,6 @@ export default function WaitlistSection() {
               </div>
             </div>
 
-            {/* Trust Indicators - EXACT text from main */}
             <div className="grid md:grid-cols-3 gap-6 max-w-3xl mx-auto mt-12 pt-8 border-t border-white/30">
               <div className="text-center">
                 <div className="text-2xl mb-2">⚡</div>
@@ -200,6 +157,7 @@ export default function WaitlistSection() {
             </div>
           </div>
         </div>
+        */}
 
       </div>
     </section>
