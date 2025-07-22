@@ -19,7 +19,7 @@ export default function ChatInputSection() {
   }
 
   return (
-    <section className="relative py-24 flex items-center justify-center chat-gradient min-h-[400px]">
+    <section className="relative py-24 flex items-center justify-center bg-gradient-chat min-h-[400px]">
       <div className="relative z-10 w-full max-w-4xl px-4 flex flex-col items-center">
         <div className="relative w-full flex items-center">
           <input
