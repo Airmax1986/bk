@@ -1,4 +1,3 @@
-// components/WaitlistSection.js
 'use client'
 
 export default function WaitlistSection() {
@@ -17,42 +16,39 @@ export default function WaitlistSection() {
           </h2>
         </div>
 
-        {/* Feature Cards - The Core Solution */}
+        {/* Feature Cards - The Core Solution (No icons, larger text, specific gradients) */}
         <div className="grid md:grid-cols-3 gap-6 mb-24">
           
-          {/* Deep Discovery Card (Matches "Gems" style, but no icon) */}
-          <div className="feature-card gems-gradient p-8 text-white flex flex-col justify-end"> {/* Use feature-card and gems-gradient */}
-            <button className="plus-button"> {/* Use plus-button class */}
+          {/* Deep Discovery Card (Matches "Gems" style) */}
+          <div className="feature-card gems-gradient p-8 text-white flex flex-col justify-end">
+            <button className="plus-button">
               +
             </button>
-            {/* Removed icon as requested */}
             <div>
-              <h3 className="card-title text-3xl md:text-4xl">Deep Discovery</h3> {/* Larger title */}
-              <p className="card-subtitle text-lg md:text-xl leading-relaxed">An empathetic AI coach that asks the questions strategists charge $5,000 for</p> {/* Larger copy */}
+              <h3 className="card-title text-3xl md:text-4xl">Deep Discovery</h3>
+              <p className="card-subtitle text-lg md:text-xl leading-relaxed">An empathetic AI coach that asks the questions strategists charge $5,000 for</p>
             </div>
           </div>
 
-          {/* Your Brand Kernel Card (Matches "Gemini Live" style, no icon) */}
-          <div className="feature-card live-gradient p-8 text-white flex flex-col justify-end"> {/* Use feature-card and live-gradient */}
-            <button className="plus-button"> {/* Use plus-button class */}
+          {/* Your Brand Kernel Card (Matches "Gemini Live" style) */}
+          <div className="feature-card live-gradient p-8 text-white flex flex-col justify-end">
+            <button className="plus-button">
               +
             </button>
-            {/* Removed icon as requested */}
             <div>
-              <h3 className="card-title text-3xl md:text-4xl">Your Brand Kernel</h3> {/* Larger title */}
-              <p className="card-subtitle text-lg md:text-xl leading-relaxed">Your authentic core crystallized into your personal Brand Book</p> {/* Larger copy */}
+              <h3 className="card-title text-3xl md:text-4xl">Your Brand Kernel</h3>
+              <p className="card-subtitle text-lg md:text-xl leading-relaxed">Your authentic core crystallized into your personal Brand Book</p>
             </div>
           </div>
 
-          {/* Brand Flows Card (Matches "Deep Research" style, no icon) */}
-          <div className="feature-card research-gradient p-8 text-white flex flex-col justify-end"> {/* Use feature-card and research-gradient */}
-            <button className="plus-button"> {/* Use plus-button class */}
+          {/* Brand Flows Card (Matches "Deep Research" style) */}
+          <div className="feature-card research-gradient p-8 text-white flex flex-col justify-end">
+            <button className="plus-button">
               +
             </button>
-            {/* Removed icon as requested */}
             <div>
-              <h3 className="card-title text-3xl md:text-4xl">Brand Flows</h3> {/* Larger title */}
-              <p className="card-subtitle text-lg md:text-xl leading-relaxed">Automated flows that transform your kernel into compelling content</p> {/* Larger copy */}
+              <h3 className="card-title text-3xl md:text-4xl">Brand Flows</h3>
+              <p className="card-subtitle text-lg md:text-xl leading-relaxed">Automated flows that transform your kernel into compelling content</p>
               <div className="mt-4">
                 <span className="text-xs bg-white/20 px-2 py-1 rounded-full">Coming Soon</span>
               </div>
