@@ -22,9 +22,7 @@
   --glass-blur: blur(16px);
 }
 
-{
-  box-sizing: border-box;
-}
+ * { box-sizing: border-box; }
 
 body {
   background: var(--bg-primary);
