@@ -12,8 +12,7 @@ module.exports = {
         'space-grotesk': ['var(--font-space-grotesk)', 'Space Grotesk', 'system-ui', 'sans-serif'],
       },
       colors: {
-        // Gemini Light Theme Colors
-        'gemini': {
+        'gemini': { // Renamed from 'gemini light theme colors' to just 'gemini'
           50: '#f8fafc',
           100: '#f1f5f9',
           200: '#e2e8f0',
@@ -61,18 +60,7 @@ module.exports = {
           800: '#9a3412',
           900: '#7c2d12',
         },
-        'cosmic': {
-          50: '#f8fafc',
-          100: '#f1f5f9',
-          200: '#e2e8f0',
-          300: '#cbd5e1',
-          400: '#94a3b8',
-          500: '#64748b',
-          600: '#475569',
-          700: '#334155',
-          800: '#1e293b',
-          900: '#0f172a',
-        }
+        // 'cosmic' palette was identical to 'gemini' and has been removed.
       },
       backgroundImage: {
         'gradient-gemini': 'linear-gradient(135deg, #a855f7 0%, #3b82f6 100%)',
@@ -82,14 +70,12 @@ module.exports = {
         'gradient-purple': 'linear-gradient(135deg, #a855f7 0%, #ec4899 100%)',
         'gradient-nebula': 'linear-gradient(135deg, #8b5cf6 0%, #ec4899 50%, #f59e0b 100%)',
         'gradient-light': 'linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%)',
-        'gradient-chat': 'linear-gradient(135deg, #60a5fa 0%, #a855f7 100%)',
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-
-        // Specific gradients for the feature cards (matching screenshot colors)
+        
+        // Consolidated gradients from globals.css for BrandKernel features
+        'gradient-chat': `linear-gradient(135deg, #60a5fa 0%, #a855f7 100%), url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Ccircle cx='20' cy='20' r='2'/%3E%3Ccircle cx='80' cy='20' r='2'/%3E%3Ccircle cx='20' cy='80' r='2'/%3E%3Ccircle cx='80' cy='80' r='2'/%3E%3Ccircle cx='50' cy='50' r='3'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`, // Pattern integrated
         'gems-gradient': 'linear-gradient(135deg, #a855f7 0%, #3b82f6 100%)', /* Purple to Blue */
         'live-gradient': 'linear-gradient(135deg, #1e40af 0%, #3730a3 100%)', /* Dark Blue to Indigo */
-        'research-gradient': 'linear-gradient(135deg, #1e1b4b 0%, #312e81 100%)', /* Dark Purple to Dark Blue */
+        'research-gradient': `linear-gradient(135deg, #1e1b4b 0%, #312e81 100%), url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='7' cy='7' r='1'/%3E%3Ccircle cx='27' cy='7' r='1'/%3E%3Ccircle cx='47' cy='7' r='1'/%3E%3Ccircle cx='7' cy='27' r='1'/%3E%3Ccircle cx='27' cy='27' r='1'/%3E%3Ccircle cx='47' cy='27' r='1'/%3E%3Ccircle cx='7' cy='47' r='1'/%3E%3Ccircle cx='27' cy='47' r='1'/%3E%3Ccircle cx='47' cy='47' r='1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`, // SVG-Muster direkt integriert
       },
       typography: {
         DEFAULT: {
@@ -123,7 +109,7 @@ module.exports = {
       },
       animation: {
         'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-        'float': 'float 6s ease-in-out infinite',
+        'float': 'float 6s ease-in-out infinite', // Consolidated float animation
         'bounce-slow': 'bounce 2s infinite',
         'gradient': 'gradient 6s ease infinite',
         'twinkle': 'twinkle 4s ease-in-out infinite alternate',
@@ -131,7 +117,7 @@ module.exports = {
       keyframes: {
         float: {
           '0%, 100%': { transform: 'translateY(0px)' },
-          '50%': { transform: 'translateY(-20px)' },
+          '50%': { transform: 'translateY(-20px)' }, // Retained original value
         },
         gradient: {
           '0%, 100%': {
@@ -172,7 +158,7 @@ module.exports = {
   plugins: [
     require('@tailwindcss/typography'),
     require('@tailwindcss/line-clamp'),
-    // Custom plugin for Gemini-specific utilities
+    // Custom plugin for BrandKernel-specific utilities
     function({ addUtilities, addComponents }) {
       const newUtilities = {
         '.text-gradient-gemini': {
@@ -189,6 +175,12 @@ module.exports = {
         },
         '.text-gradient-blue': {
           'background': 'linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%)',
+          '-webkit-background-clip': 'text',
+          '-webkit-text-fill-color': 'transparent',
+          'background-clip': 'text',
+        },
+        '.text-gradient-hero': { // New gradient for hero headline
+          'background': 'linear-gradient(90deg, #3b82f6 0%, #a855f7 100%)',
           '-webkit-background-clip': 'text',
           '-webkit-text-fill-color': 'transparent',
           'background-clip': 'text',
