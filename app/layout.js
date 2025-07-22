@@ -16,20 +16,20 @@ const spaceGrotesk = Space_Grotesk({
 
 export const metadata = {
   title: {
-    template: '%s | Gemini',
-    default: 'Gemini - Find what\'s on your mind'
+    template: '%s | BrandKernel.io',
+    default: 'BrandKernel.io - Find what\'s on your mind'
   },
-  description: 'Find what\'s on your mind with Gemini AI assistant.',
-  keywords: 'ai, assistant, gemini, google, artificial intelligence',
-  authors: [{ name: 'Google' }],
+  description: 'The AI dialogue platform for authentic brand development. Discover your Brand Kernel through intelligent conversations.',
+  keywords: 'brand kernel, personal branding, AI dialogue, authentic branding, brand flows, freelancer branding, creator branding',
+  authors: [{ name: 'BrandKernel.io' }],
   viewport: 'width=device-width, initial-scale=1',
   openGraph: {
     type: 'website',
     locale: 'en_US',
     url: 'https://brandkernel.io',
-    title: 'Gemini - Find what\'s on your mind',
-    description: 'Find what\'s on your mind with Gemini AI assistant.',
-    siteName: 'Gemini'
+    title: 'BrandKernel.io - Find what\'s on your mind',
+    description: 'The AI dialogue platform for authentic brand development.',
+    siteName: 'BrandKernel.io'
   }
 }
 
