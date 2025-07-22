@@ -20,46 +20,39 @@ export default function WaitlistSection() {
         {/* Feature Cards - The Core Solution */}
         <div className="grid md:grid-cols-3 gap-6 mb-24">
           
-          {/* Deep Discovery Card (Matches "Gems" style) */}
-          <div className="feature-card gems-gradient p-8 text-white flex flex-col justify-between">
-            <button className="plus-button">
+          {/* Deep Discovery Card (Matches "Gems" style, but no icon) */}
+          <div className="feature-card gems-gradient p-8 text-white flex flex-col justify-end"> {/* Use feature-card and gems-gradient */}
+            <button className="plus-button"> {/* Use plus-button class */}
               +
             </button>
-            <div className="flex-grow flex items-center justify-center">
-              <svg className="w-24 h-24 text-white opacity-80" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-              </svg>
-            </div>
+            {/* Removed icon as requested */}
             <div>
-              <h3 className="card-title">Deep Discovery</h3>
-              <p className="card-subtitle">An empathetic AI coach for deep brand insights</p>
+              <h3 className="card-title text-3xl md:text-4xl">Deep Discovery</h3> {/* Larger title */}
+              <p className="card-subtitle text-lg md:text-xl leading-relaxed">An empathetic AI coach that asks the questions strategists charge $5,000 for</p> {/* Larger copy */}
             </div>
           </div>
 
-          {/* Your Brand Kernel Card (Matches "Gemini Live" style) */}
-          <div className="feature-card live-gradient p-8 text-white flex flex-col justify-end">
-            <button className="plus-button">
+          {/* Your Brand Kernel Card (Matches "Gemini Live" style, no icon) */}
+          <div className="feature-card live-gradient p-8 text-white flex flex-col justify-end"> {/* Use feature-card and live-gradient */}
+            <button className="plus-button"> {/* Use plus-button class */}
               +
             </button>
-            <div className="text-center">
-              <h3 className="card-title text-4xl font-semibold">Your Brand Kernel</h3>
-              <p className="card-subtitle text-lg">Your authentic core crystallized into a Brand Book</p>
+            {/* Removed icon as requested */}
+            <div>
+              <h3 className="card-title text-3xl md:text-4xl">Your Brand Kernel</h3> {/* Larger title */}
+              <p className="card-subtitle text-lg md:text-xl leading-relaxed">Your authentic core crystallized into your personal Brand Book</p> {/* Larger copy */}
             </div>
           </div>
 
-          {/* Brand Flows Card (Matches "Deep Research" style) */}
-          <div className="feature-card research-gradient p-8 text-white flex flex-col justify-end">
-            <button className="plus-button">
+          {/* Brand Flows Card (Matches "Deep Research" style, no icon) */}
+          <div className="feature-card research-gradient p-8 text-white flex flex-col justify-end"> {/* Use feature-card and research-gradient */}
+            <button className="plus-button"> {/* Use plus-button class */}
               +
             </button>
-            <div className="text-center">
-              <div className="mb-4">
-                <svg className="w-10 h-10 mx-auto text-white opacity-80" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                </svg>
-              </div>
-              <h3 className="card-title">Brand Flows</h3>
-              <p className="card-subtitle">Automated content activation from your kernel</p>
+            {/* Removed icon as requested */}
+            <div>
+              <h3 className="card-title text-3xl md:text-4xl">Brand Flows</h3> {/* Larger title */}
+              <p className="card-subtitle text-lg md:text-xl leading-relaxed">Automated flows that transform your kernel into compelling content</p> {/* Larger copy */}
               <div className="mt-4">
                 <span className="text-xs bg-white/20 px-2 py-1 rounded-full">Coming Soon</span>
               </div>
