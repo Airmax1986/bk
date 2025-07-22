@@ -154,6 +154,7 @@ module.exports = {
   },
   plugins: [
     require('@tailwindcss/typography'),
+    require('@tailwindcss/line-clamp'), // <-- ADD THIS LINE
     // Custom plugin for Gemini-specific utilities
     function({ addUtilities, addComponents }) {
       const newUtilities = {
@@ -196,28 +197,8 @@ module.exports = {
         },
       }
       
-      const newComponents = {
-        '.feature-card': {
-          'position': 'relative',
-          'overflow': 'hidden',
-          'border-radius': '1.5rem',
-          'transition': 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
-          'cursor': 'pointer',
-          'aspect-ratio': '16/10',
-          '&:hover': {
-            'transform': 'translateY(-4px)',
-            'box-shadow': '0 20px 40px rgba(0, 0, 0, 0.1)',
-          }
-        },
-        '.glass-card': {
-          'background': 'rgba(255, 255, 255, 0.7)',
-          'backdrop-filter': 'blur(10px)',
-          '-webkit-backdrop-filter': 'blur(10px)',
-          'border': '1px solid rgba(255, 255, 255, 0.3)',
-          'border-radius': '1.5rem',
-          'box-shadow': '0 8px 32px 0 rgba(31, 38, 135, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.4)',
-        }
-      }
+      // Removed .feature-card and .glass-card from here as they are defined in globals.css
+      const newComponents = {} 
       
       addUtilities(newUtilities)
       addComponents(newComponents)
