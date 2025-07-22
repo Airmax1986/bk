@@ -1,4 +1,3 @@
-// app/layout.js
 import './globals.css'
 import { Inter, Space_Grotesk } from 'next/font/google'
 import Footer from '../components/Footer'
@@ -19,18 +18,18 @@ const spaceGrotesk = Space_Grotesk({
 export const metadata = {
   title: {
     template: '%s | BrandKernel.io',
-    default: 'BrandKernel.io - Discover Your Authentic Brand' // Updated default title
+    default: 'BrandKernel.io - Discover Your Authentic Brand'
   },
-  description: 'The AI dialogue platform for authentic brand development. Discover your Brand Kernel through intelligent conversations and activate it daily.', // Updated description
-  keywords: 'brand kernel, personal branding, AI dialogue, authentic branding, brand flows, freelancer branding, creator branding, brand intelligence', // Updated keywords
+  description: 'The AI dialogue platform for authentic brand development. Discover your Brand Kernel through intelligent conversations and activate it daily.',
+  keywords: 'brand kernel, personal branding, AI dialogue, authentic branding, brand flows, freelancer branding, creator branding, brand intelligence',
   authors: [{ name: 'BrandKernel.io' }],
   viewport: 'width=device-width, initial-scale=1',
   openGraph: {
     type: 'website',
     locale: 'en_US',
     url: 'https://brandkernel.io',
-    title: 'BrandKernel.io - Discover Your Authentic Brand', // Updated title
-    description: 'The AI dialogue platform for authentic brand development.', // Updated description
+    title: 'BrandKernel.io - Discover Your Authentic Brand',
+    description: 'The AI dialogue platform for authentic brand development.',
     siteName: 'BrandKernel.io'
   }
 }
