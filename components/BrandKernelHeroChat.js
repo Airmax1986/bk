@@ -21,21 +21,21 @@ export default function BrandKernelHeroChat() {
 
   return (
     <section className="relative min-h-screen flex flex-col items-center justify-center bg-white overflow-hidden">
-      {/* Background Gradient (no blinking circles) */}
+      {/* Background Gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-gray-50 via-white to-gray-100"></div>
 
       {/* Main Content */}
-      <div className="relative z-10 text-center max-w-6xl mx-auto px-4 pt-20 pb-12"> {/* Added pt-20 for navigation clearance */}
+      <div className="relative z-10 text-center max-w-6xl mx-auto px-4 pt-20 pb-12">
         
         {/* Pre-Launch Badge */}
         <div className="inline-flex items-center px-4 py-2 bg-coral-50 border border-coral-200 rounded-full text-coral-700 text-sm font-medium mb-8">
           <span className="w-2 h-2 bg-coral-400 rounded-full mr-2 animate-pulse"></span>
-          Coming Soon - Join the Brand Kernel Discovery
+          Pre-Launch: Join the Brand Kernel Discovery
         </div>
 
         {/* Dynamic Headline */}
         <h1 className="text-6xl md:text-8xl font-normal mb-8 leading-tight">
-          <span className="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 bg-clip-text text-transparent">
+          <span className="text-gradient-hero">
             {rotatingTexts[currentText]}
           </span>
         </h1>
@@ -67,7 +67,7 @@ export default function BrandKernelHeroChat() {
             href="https://brandkernel.kit.com/profile?_gl=1*w8l014*_gcl_au*MTUzNjY5NTA1MS4xNzQ2NzQyOTA3"
             target="_blank"
             rel="noopener noreferrer"
-            className="px-8 py-4 bg-coral-500 text-white font-semibold rounded-lg hover:bg-coral-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+            className="px-8 py-4 bg-blue-500 text-white font-semibold rounded-lg hover:bg-blue-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
           >
             Reserve Your Brand Kernel Discovery
           </a>
