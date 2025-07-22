@@ -12,7 +12,7 @@ module.exports = {
         'space-grotesk': ['var(--font-space-grotesk)', 'Space Grotesk', 'system-ui', 'sans-serif'],
       },
       colors: {
-        'gemini': { // Renamed from 'gemini light theme colors' to just 'gemini'
+        'gemini': { // Base color palette, named 'gemini' for consistency with original structure
           50: '#f8fafc',
           100: '#f1f5f9',
           200: '#e2e8f0',
@@ -60,11 +60,11 @@ module.exports = {
           800: '#9a3412',
           900: '#7c2d12',
         },
-        // 'cosmic' palette was identical to 'gemini' and has been removed.
+        // The 'cosmic' palette was identical to 'gemini' and has been removed for redundancy.
       },
       backgroundImage: {
         'gradient-gemini': 'linear-gradient(135deg, #a855f7 0%, #3b82f6 100%)',
-        'gradient-cosmic': 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+        'gradient-cosmic': 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)', // This gradient uses specific colors, not the 'cosmic' palette
         'gradient-ocean': 'linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%)',
         'gradient-space': 'linear-gradient(135deg, #1e1b4b 0%, #312e81 50%, #1e293b 100%)',
         'gradient-purple': 'linear-gradient(135deg, #a855f7 0%, #ec4899 100%)',
@@ -179,7 +179,7 @@ module.exports = {
           '-webkit-text-fill-color': 'transparent',
           'background-clip': 'text',
         },
-        '.text-gradient-hero': { // New gradient for hero headline
+        '.text-gradient-hero': { // New gradient for hero headline, inspired by BrandKernel's primary colors
           'background': 'linear-gradient(90deg, #3b82f6 0%, #a855f7 100%)',
           '-webkit-background-clip': 'text',
           '-webkit-text-fill-color': 'transparent',
