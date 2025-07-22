@@ -1,6 +1,7 @@
 // app/page.js
 import BrandKernelHeroChat from '../components/BrandKernelHeroChat'
 import WaitlistSection from '../components/WaitlistSection'
+import ChatInputSection from '../components/ChatInputSection' // Re-introduce ChatInputSection
 import Link from 'next/link'
 
 export default function HomePage() {
@@ -12,7 +13,10 @@ export default function HomePage() {
       {/* Section 2: Now BrandKernel can (Feature Cards) */}
       <WaitlistSection />
 
-      {/* Section 3: Problem Statement */}
+      {/* Section 3: Ask me anything (Chat Input) */}
+      <ChatInputSection />
+
+      {/* Section 4: Problem Statement */}
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4 max-w-6xl">
           <h2 className="text-4xl md:text-5xl font-bold font-space-grotesk text-center mb-16">
@@ -91,7 +95,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Section 4: Your Brand Kernel Journey */}
+      {/* Section 5: Your Brand Kernel Journey */}
       <section className="py-24 bg-gray-100">
         <div className="container mx-auto px-4 max-w-6xl">
           <h2 className="text-4xl md:text-5xl font-bold font-space-grotesk text-center mb-16">
@@ -125,7 +129,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Section 5: Our Core USP */}
+      {/* Section 6: Our Core USP */}
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4 max-w-6xl">
           <h2 className="text-4xl md:text-5xl font-bold font-space-grotesk text-center mb-16">
@@ -155,7 +159,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Section 6: Thought Leadership Teaser */}
+      {/* Section 7: Thought Leadership Teaser */}
       <section className="py-24 bg-gray-50">
         <div className="container mx-auto px-4 max-w-6xl">
           <h2 className="text-4xl md:text-5xl font-bold font-space-grotesk text-center mb-16">
@@ -224,7 +228,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Section 7: Detailed Waitlist CTA */}
+      {/* Section 8: Detailed Waitlist CTA */}
       <section className="py-24 bg-gradient-to-br from-coral-400 via-coral-500 to-purple-600 text-white relative overflow-hidden">
         <div className="absolute inset-0 opacity-20">
           <div className="w-full h-full" style={{
@@ -305,7 +309,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Section 8: Founder Vision */}
+      {/* Section 9: Founder Vision */}
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4 max-w-4xl">
           <h2 className="text-4xl md:text-5xl font-bold font-space-grotesk text-center mb-16">
@@ -361,7 +365,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Section 9: Our Mission & Roadmap */}
+      {/* Section 10: Our Mission & Roadmap */}
       <section className="py-24 bg-gray-100">
         <div className="container mx-auto px-4 max-w-6xl">
           <h2 className="text-4xl md:text-5xl font-bold font-space-grotesk text-center mb-16">
