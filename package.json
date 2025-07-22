@@ -19,7 +19,7 @@
     "date-fns": "^3.6.0",
     "remark": "^15.0.1",
     "remark-html": "^16.0.1",
-    "@tailwindcss/line-clamp": "^0.4.4"  <-- ADD THIS LINE
+    "@tailwindcss/line-clamp": "^0.4.4"
   },
   "devDependencies": {
     "@types/node": "^20",
