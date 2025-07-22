@@ -36,7 +36,7 @@ body {
   overflow-x: hidden;
 }
 
-/* Gemini light theme background */
+/* Minimal light theme background */
 .light-cosmic-bg {
   background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
   position: relative;
@@ -54,7 +54,7 @@ body {
     inset 0 1px 0 rgba(255, 255, 255, 0.4);
 }
 
-/* Gemini feature cards */
+/* Feature cards */
 .feature-card {
   position: relative;
   overflow: hidden;
@@ -271,3 +271,5 @@ img {
   color: rgba(255, 255, 255, 0.8);
   font-size: 0.875rem;
 }
+
+/* Force update for Vercel deployment */
