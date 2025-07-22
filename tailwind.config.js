@@ -49,6 +49,18 @@ module.exports = {
           800: '#1e40af',
           900: '#1e3a8a',
         },
+        'coral': { // Added coral colors for BrandKernel branding
+          50: '#fff7ed',
+          100: '#ffedd5',
+          200: '#fed7aa',
+          300: '#fdba74',
+          400: '#fb923c',
+          500: '#f97316',
+          600: '#ea580c',
+          700: '#c2410c',
+          800: '#9a3412',
+          900: '#7c2d12',
+        },
         'cosmic': {
           50: '#f8fafc',
           100: '#f1f5f9',
@@ -73,6 +85,11 @@ module.exports = {
         'gradient-chat': 'linear-gradient(135deg, #60a5fa 0%, #a855f7 100%)',
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+
+        // Specific gradients for the feature cards (matching screenshot colors)
+        'gems-gradient': 'linear-gradient(135deg, #a855f7 0%, #3b82f6 100%)', /* Purple to Blue */
+        'live-gradient': 'linear-gradient(135deg, #1e40af 0%, #3730a3 100%)', /* Dark Blue to Indigo */
+        'research-gradient': 'linear-gradient(135deg, #1e1b4b 0%, #312e81 100%)', /* Dark Purple to Dark Blue */
       },
       typography: {
         DEFAULT: {
@@ -154,7 +171,7 @@ module.exports = {
   },
   plugins: [
     require('@tailwindcss/typography'),
-    require('@tailwindcss/line-clamp'), // <-- ADD THIS LINE
+    require('@tailwindcss/line-clamp'),
     // Custom plugin for Gemini-specific utilities
     function({ addUtilities, addComponents }) {
       const newUtilities = {
@@ -197,7 +214,6 @@ module.exports = {
         },
       }
       
-      // Removed .feature-card and .glass-card from here as they are defined in globals.css
       const newComponents = {} 
       
       addUtilities(newUtilities)
