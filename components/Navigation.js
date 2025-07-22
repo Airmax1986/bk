@@ -10,9 +10,9 @@ export default function Navigation() {
 
   const links = [
     { href: '/', label: 'Home' },
-    { href: '/blog', label: 'Brand Intelligence Hub' },
-    { href: '/about', label: 'About' },
-    { href: '/manifesto', label: 'Manifesto' },
+    { href: '/blog', label: 'Advanced' },
+    { href: '/about', label: 'Discover' },
+    { href: '/manifesto', label: 'About Gemini' },
   ]
 
   useEffect(() => {
@@ -26,95 +26,66 @@ export default function Navigation() {
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       scrolled 
-        ? 'bg-white/95 backdrop-blur-md shadow-gemini-lg border-b border-white/20' 
+        ? 'bg-white/95 backdrop-blur-md' 
         : 'bg-white/80 backdrop-blur-sm'
     }`}>
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
+      <div className="w-full px-8 lg:px-12">
+        <div className="flex items-center justify-between h-20">
           
-          {/* Logo */}
+          {/* Logo - Simple Text */}
           <Link 
             href="/" 
-            className="flex items-center space-x-3 hover:opacity-70 transition-opacity group"
+            className="text-2xl font-medium text-black tracking-tight hover:opacity-70 transition-opacity"
           >
-            {/* Logo Symbol - Gemini Style */}
-            <div className="relative">
-              <div className="w-10 h-10 bg-gradient-gemini rounded-xl flex items-center justify-center shadow-gemini-lg group-hover:shadow-gemini-xl transition-all duration-300 group-hover:scale-105">
-                <div className="w-6 h-6 relative">
-                  {/* Gemini-inspired logo */}
-                  <div className="absolute inset-0">
-                    <svg viewBox="0 0 24 24" className="w-full h-full text-white" fill="currentColor">
-                      <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" opacity="0.8" />
-                      <circle cx="12" cy="12" r="2" />
-                    </svg>
-                  </div>
-                </div>
-              </div>
-              {/* Subtle Glow Effect */}
-              <div className="absolute inset-0 w-10 h-10 bg-gradient-gemini rounded-xl opacity-20 blur-sm group-hover:opacity-30 transition-opacity"></div>
-            </div>
-            
-            {/* Brand Name */}
-            <div className="flex flex-col">
-              <span className="text-xl font-space-grotesk font-bold tracking-tight text-gray-900">
-                BrandKernel<span className="text-gradient-gemini">.io</span>
-              </span>
-              <span className="text-xs text-gray-500 font-medium -mt-1">
-                Brand Intelligence
-              </span>
-            </div>
+            Gemini
           </Link>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          {/* Desktop Navigation - Clean & Minimal */}
+          <div className="hidden md:flex items-center space-x-12">
             {links.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className={`text-sm font-medium transition-all duration-200 relative py-2 px-3 rounded-lg ${
+                className={`text-base font-normal transition-all duration-200 py-2 px-0 ${
                   pathname === link.href
-                    ? 'text-blue-600 bg-gradient-to-r from-blue-50 to-purple-50'
-                    : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
+                    ? 'text-black'
+                    : 'text-gray-600 hover:text-black'
                 }`}
               >
                 {link.label}
-                {pathname === link.href && (
-                  <span className="absolute -bottom-px left-1/2 transform -translate-x-1/2 w-1 h-1 bg-gradient-gemini rounded-full" />
-                )}
               </Link>
             ))}
             
-            {/* CTA Button - Gemini Style */}
+            {/* CTA Button - Rounded Pill */}
             <a
               href="https://brandkernel.kit.com/profile?_gl=1*w8l014*_gcl_au*MTUzNjY5NTA1MS4xNzQ2NzQyOTA3"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-6 py-2.5 bg-gradient-gemini text-white rounded-full font-medium hover:shadow-gemini-lg transition-all duration-300 transform hover:scale-105 text-sm relative overflow-hidden group"
+              className="px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-full font-medium hover:shadow-lg transition-all duration-300 text-base"
             >
-              <span className="relative z-10">Join Waitlist</span>
-              <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              Log In
             </a>
           </div>
 
           {/* Mobile menu button */}
           <button
-            className="md:hidden p-2 -mr-2 rounded-lg hover:bg-gray-100 transition-colors"
+            className="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors"
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle menu"
           >
             <div className="w-6 h-6 flex flex-col justify-center items-center">
               <span
-                className={`block w-full h-0.5 bg-gray-900 transform transition-all duration-300 ${
+                className={`block w-full h-0.5 bg-black transform transition-all duration-300 ${
                   isOpen ? 'rotate-45 translate-y-0.5' : '-translate-y-1.5'
                 }`}
               />
               <span
-                className={`block w-full h-0.5 bg-gray-900 transition-opacity duration-300 ${
+                className={`block w-full h-0.5 bg-black transition-opacity duration-300 ${
                   isOpen ? 'opacity-0' : 'opacity-100'
                 }`}
               />
               <span
-                className={`block w-full h-0.5 bg-gray-900 transform transition-all duration-300 ${
+                className={`block w-full h-0.5 bg-black transform transition-all duration-300 ${
                   isOpen ? '-rotate-45 -translate-y-0.5' : 'translate-y-1.5'
                 }`}
               />
@@ -135,8 +106,8 @@ export default function Navigation() {
                 href={link.href}
                 className={`block px-4 py-3 text-base font-medium transition-colors rounded-xl ${
                   pathname === link.href
-                    ? 'text-blue-600 bg-gradient-to-r from-blue-50 to-purple-50'
-                    : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
+                    ? 'text-black bg-gray-50'
+                    : 'text-gray-600 hover:text-black hover:bg-gray-50'
                 }`}
                 onClick={() => setIsOpen(false)}
               >
@@ -149,18 +120,11 @@ export default function Navigation() {
               href="https://brandkernel.kit.com/profile?_gl=1*w8l014*_gcl_au*MTUzNjY5NTA1MS4xNzQ2NzQyOTA3"
               target="_blank"
               rel="noopener noreferrer"
-              className="block px-4 py-3 bg-gradient-gemini text-white rounded-xl font-medium hover:shadow-gemini-lg transition-all duration-300 text-center mt-4"
+              className="block px-4 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-xl font-medium text-center mt-4"
               onClick={() => setIsOpen(false)}
             >
-              Join Waitlist
+              Log In
             </a>
-            
-            {/* Mobile Social Proof */}
-            <div className="px-4 py-3 text-center">
-              <p className="text-xs text-gray-500">
-                <span className="font-semibold text-gradient-gemini">247+</span> Creators already on the list
-              </p>
-            </div>
           </div>
         </div>
       </div>
