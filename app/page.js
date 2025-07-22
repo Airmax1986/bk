@@ -1,7 +1,6 @@
-// app/page.js
 import BrandKernelHeroChat from '../components/BrandKernelHeroChat'
 import WaitlistSection from '../components/WaitlistSection'
-import ChatInputSection from '../components/ChatInputSection' // Re-introduce ChatInputSection
+import ChatInputSection from '../components/ChatInputSection'
 import Link from 'next/link'
 
 export default function HomePage() {
@@ -444,7 +443,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
     </div>
   )
 }
