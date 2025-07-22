@@ -18,7 +18,8 @@
     "@tailwindcss/typography": "^0.5.13",
     "date-fns": "^3.6.0",
     "remark": "^15.0.1",
-    "remark-html": "^16.0.1"
+    "remark-html": "^16.0.1",
+    "@tailwindcss/line-clamp": "^0.4.4"  <-- ADD THIS LINE
   },
   "devDependencies": {
     "@types/node": "^20",
