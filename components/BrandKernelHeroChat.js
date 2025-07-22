@@ -101,18 +101,7 @@ export default function BrandKernelHeroChat() {
         </div>
 
       </div>
-
-      {/* Floating Elements */}
-      <div className="absolute top-20 left-10 w-20 h-20 bg-gradient-to-br from-coral-200 to-coral-300 rounded-full opacity-20 animate-pulse"></div>
-      <div className="absolute bottom-20 right-10 w-16 h-16 bg-gradient-to-br from-blue-200 to-blue-300 rounded-full opacity-20 animate-pulse"></div>
-      <div className="absolute top-1/3 right-20 w-12 h-12 bg-gradient-to-br from-purple-200 to-purple-300 rounded-full opacity-20 animate-pulse"></div>
-
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <svg className="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-        </svg>
-      </div>
+      {/* Removed floating elements as requested */}
     </section>
   )
 }
