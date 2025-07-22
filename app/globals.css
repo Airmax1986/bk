@@ -61,7 +61,7 @@ body {
   border-radius: 1.5rem;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
-  aspect-ratio: 16/10;
+  aspect-ratio: 16/10; /* Important for consistent card size */
 }
 
 .feature-card::before {
@@ -85,17 +85,17 @@ body {
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
 }
 
-/* Specific gradient backgrounds for cards */
+/* Specific gradient backgrounds for cards (from screenshot) */
 .gems-gradient {
-  background: linear-gradient(135deg, #a855f7 0%, #3b82f6 100%);
+  background: linear-gradient(135deg, #a855f7 0%, #3b82f6 100%); /* Purple to Blue */
 }
 
 .live-gradient {
-  background: linear-gradient(135deg, #1e40af 0%, #3730a3 100%);
+  background: linear-gradient(135deg, #1e40af 0%, #3730a3 100%); /* Dark Blue to Indigo */
 }
 
 .research-gradient {
-  background: linear-gradient(135deg, #1e1b4b 0%, #312e81 100%);
+  background: linear-gradient(135deg, #1e1b4b 0%, #312e81 100%); /* Dark Purple to Dark Blue */
   background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='7' cy='7' r='1'/%3E%3Ccircle cx='27' cy='7' r='1'/%3E%3Ccircle cx='47' cy='7' r='1'/%3E%3Ccircle cx='7' cy='27' r='1'/%3E%3Ccircle cx='27' cy='27' r='1'/%3E%3Ccircle cx='47' cy='27' r='1'/%3E%3Ccircle cx='7' cy='47' r='1'/%3E%3Ccircle cx='27' cy='47' r='1'/%3E%3Ccircle cx='47' cy='47' r='1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 }
 
@@ -263,13 +263,13 @@ img {
 .card-title {
   color: white;
   font-weight: 600;
-  font-size: 1.5rem;
+  font-size: 1.5rem; /* Default, overridden in WaitlistSection */
   margin-bottom: 0.5rem;
 }
 
 .card-subtitle {
   color: rgba(255, 255, 255, 0.8);
-  font-size: 0.875rem;
+  font-size: 0.875rem; /* Default, overridden in WaitlistSection */
 }
 
 /* Force update for Vercel deployment */
