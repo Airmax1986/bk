@@ -1,6 +1,5 @@
 import './globals.css'
 import { Inter, Space_Grotesk } from 'next/font/google'
-import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 
 const inter = Inter({ 
@@ -17,29 +16,28 @@ const spaceGrotesk = Space_Grotesk({
 
 export const metadata = {
   title: {
-    template: '%s | BrandKernel.io',
-    default: 'BrandKernel.io - KI-Dialogplattform für Personal Branding'
+    template: '%s | Gemini',
+    default: 'Gemini - Find what\'s on your mind'
   },
-  description: 'Die KI-Dialogplattform für Consultants, Founders, Freelancer & Creators. Entdecke deinen Brand Kernel durch intelligente Dialoge und aktiviere deine Marke täglich mit Brand Flows.',
-  keywords: 'personal branding, brand kernel, KI dialog, brand flows, freelancer branding, consultant branding, creator branding',
-  authors: [{ name: 'BrandKernel.io' }],
+  description: 'Find what\'s on your mind with Gemini AI assistant.',
+  keywords: 'ai, assistant, gemini, google, artificial intelligence',
+  authors: [{ name: 'Google' }],
   viewport: 'width=device-width, initial-scale=1',
   openGraph: {
     type: 'website',
-    locale: 'de_DE',
-    url: 'https://brandkernel.vercel.app',
-    title: 'BrandKernel.io - KI-Dialogplattform für Personal Branding',
-    description: 'Entdecke deinen Brand Kernel und aktiviere deine Marke täglich.',
-    siteName: 'BrandKernel.io'
+    locale: 'en_US',
+    url: 'https://brandkernel.io',
+    title: 'Gemini - Find what\'s on your mind',
+    description: 'Find what\'s on your mind with Gemini AI assistant.',
+    siteName: 'Gemini'
   }
 }
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="de" className={`${inter.variable} ${spaceGrotesk.variable}`}>
+    <html lang="en" className={`${inter.variable} ${spaceGrotesk.variable}`}>
       <body className="font-sans antialiased bg-white text-gray-900">
         <div className="min-h-screen flex flex-col">
-          <Navigation />
           
           <main className="flex-grow">
             {children}
