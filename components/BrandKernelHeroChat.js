@@ -1,4 +1,3 @@
-// components/BrandKernelHeroChat.js
 'use client'
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
@@ -22,7 +21,7 @@ export default function BrandKernelHeroChat() {
 
   return (
     <section className="relative min-h-screen flex flex-col items-center justify-center bg-white overflow-hidden">
-      {/* Background Gradient */}
+      {/* Background Gradient (no blinking circles) */}
       <div className="absolute inset-0 bg-gradient-to-br from-gray-50 via-white to-gray-100"></div>
 
       {/* Main Content */}
@@ -101,7 +100,6 @@ export default function BrandKernelHeroChat() {
         </div>
 
       </div>
-      {/* Removed floating elements as requested */}
     </section>
   )
 }
