@@ -1,6 +1,7 @@
 import './globals.css'
 import { Inter, Space_Grotesk } from 'next/font/google'
 import Footer from '../components/Footer'
+import Navigation from '../components/Navigation' // <-- IMPORT NAVIGATION
 
 const inter = Inter({ 
   subsets: ['latin'],
@@ -38,8 +39,9 @@ export default function RootLayout({ children }) {
     <html lang="en" className={`${inter.variable} ${spaceGrotesk.variable}`}>
       <body className="font-sans antialiased bg-white text-gray-900">
         <div className="min-h-screen flex flex-col">
+          <Navigation /> {/* <-- ADD NAVIGATION HERE */}
           
-          <main className="flex-grow">
+          <main className="flex-grow pt-20"> {/* <-- ADD pt-20 FOR PADDING */}
             {children}
           </main>
 
