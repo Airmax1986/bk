@@ -66,7 +66,7 @@ export default function WaitlistSection() {
             </div>
           </div>
 
-          {/* Brand Activation Card */}
+          {/* Brand Flows Card */}
           <div className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 rounded-2xl p-8 text-white relative overflow-hidden min-h-[400px] flex flex-col justify-between">
             <div className="absolute top-6 right-6">
               <button className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center hover:bg-white/30 transition-colors">
@@ -96,7 +96,7 @@ export default function WaitlistSection() {
               </div>
 
               <div>
-                <h3 className="text-lg font-medium mb-3">Brand Activation</h3>
+                <h3 className="text-lg font-medium mb-3">Brand Flows</h3>
                 <p className="text-white/80 text-sm leading-relaxed">
                   Activate your brand daily with personalized flows
                 </p>
@@ -105,7 +105,7 @@ export default function WaitlistSection() {
           </div>
         </div>
 
-        {/* Waitlist CTA Section */}
+        {/* Waitlist CTA Section - Using EXACT text from main branch */}
         <div className="bg-gradient-to-br from-coral-400 via-coral-500 to-purple-600 rounded-3xl p-12 text-white relative overflow-hidden min-h-[300px]">
           
           {/* Background Pattern */}
@@ -136,7 +136,7 @@ export default function WaitlistSection() {
               Reserve Your Brand Kernel Discovery
             </a>
 
-            {/* Trust Indicators */}
+            {/* Trust Indicators - EXACT text from main */}
             <div className="grid md:grid-cols-3 gap-6 max-w-3xl mx-auto mt-12 pt-8 border-t border-white/30">
               <div className="text-center">
                 <div className="text-2xl mb-2">⚡</div>
